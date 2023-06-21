@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <connectionStrings>
+        <add name="STGenetics" connectionString="Data Source=localhost;Initial Catalog=STGenetics;User Id=sa;Password=Test@1234" providerName="System.Data.SqlClient" />
+    </connectionStrings>
+</configuration>

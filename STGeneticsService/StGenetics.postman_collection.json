@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "7081cb2e-3407-4100-97e2-7c9ac4dd0a82",
+		"name": "StGenetics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Animal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGVtYWlsLmNvbSIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20iLCJuYmYiOjE2ODcyMDkxMjAsImV4cCI6MTY4NzIwOTcyMCwiaWF0IjoxNjg3MjA5MTIwLCJpc3MiOiJJc3N1ZXIiLCJhdWQiOiJBdWRpZW5jZSJ9.gMVpDL0AU6yD0XQIcwFJWKKjXcyyXTo8uWw8w8L6NtmzL38344jvpTrbeQBWUsxyN7uqMtHzrAkV4k0xKbwVlQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7208/animal",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7208",
+					"path": [
+						"animal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"test@email.com\", \n    \"password\": \"test\" \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7208/api/auth",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7208",
+					"path": [
+						"api",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Animal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGVtYWlsLmNvbSIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20iLCJqdGkiOiI1NTUxNDUzMy1hMGMzLTQ3ZDctODRiNC1jYjhmNmIyZDliOWUiLCJuYmYiOjE2ODczNzM3MDAsImV4cCI6MTY4NzM3NDMwMCwiaWF0IjoxNjg3MzczNzAwLCJpc3MiOiJJc3N1ZXIiLCJhdWQiOiJBdWRpZW5jZSJ9.sg3XjAJZI_RFjOdPEv7lKdTbjV3whypPwFrelAMQir84T4CwUwWoNveCWfFeR3kh0XV6-lXAw3YtMz9envfIpw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Puqui\",\n    \"breed\": \"Dog\",\n    \"birthDate\": \"2019-01-10\",\n    \"sex\": \"2\",\n    \"price\": 2000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7208/api/animal",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7208",
+					"path": [
+						"api",
+						"animal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Animal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGVtYWlsLmNvbSIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20iLCJqdGkiOiIxZWFjY2E1NC1iMzI2LTQ4NTUtYTE2My02OGU0NjI1MDI1ZTAiLCJuYmYiOjE2ODczMjMxNjEsImV4cCI6MTY4NzMyMzc2MSwiaWF0IjoxNjg3MzIzMTYxLCJpc3MiOiJJc3N1ZXIiLCJhdWQiOiJBdWRpZW5jZSJ9.2Y1rz9QR1hPsMSMuzMYzG5nCqaEXxdWEabBFRnf0q8Ykas8UEBZwvfy84AFpBqElcUyKfbiaJma7Qfk9E_v4kw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"animalId\" : 12,\n    \"name\": \"Sancho Panzon\",\n    \"breed\": \"cat\",\n    \"birthDate\": \"2019-01-10\",\n    \"sex\": \"2\",\n    \"price\": 900\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7208/api/animal",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7208",
+					"path": [
+						"api",
+						"animal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Animal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGVtYWlsLmNvbSIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20iLCJqdGkiOiIxZWRiMjJkNS00MWZkLTQ5MDItOTBlYy05MzI2NGM0YzhiNDgiLCJuYmYiOjE2ODczNjQ4ODEsImV4cCI6MTY4NzM2NTQ4MSwiaWF0IjoxNjg3MzY0ODgxLCJpc3MiOiJJc3N1ZXIiLCJhdWQiOiJBdWRpZW5jZSJ9.uCZ3N1jNATtlnyQ-N8b63QvQJxUKYqKA3xPnrpXxZMkBP60f-uV4aPB1DzaO2gBqLnpJkqrhHVPeZhFiDhQwng",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"orderId\" : 5,\n        \"customerId\" :1001,\n        \"animalId\" :15,\n        \"quantity\" : 3,\n        \"status\" : \"Pending\"\n    }, \n    {\n        \"orderId\" : 6,\n        \"customerId\" :1001,\n        \"animalId\": 8,\n        \"quantity\" : 50,\n        \"status\" : \"Pending\"\n    }, \n    {\n        \"orderId\" : 7,\n        \"customerId\" :1001,\n        \"animalId\" :9,\n        \"quantity\" : 200,\n        \"status\" : \"Pending\"\n    }, \n    {\n        \"orderId\" : 8,\n        \"customerId\" :1001,\n        \"animalId\" :3,\n        \"quantity\" : 300,\n        \"status\" : \"Pending\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7208/api/order",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7208",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
