@@ -1,0 +1,5 @@
+STGeneticsService/.gitignore
+.DS_Store
+STGeneticsService/obj
+STGeneticsService/bin
+
